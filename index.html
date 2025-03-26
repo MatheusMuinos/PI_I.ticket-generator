@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Projeto Web</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Conference Ticket Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <button onclick="showMessage()">Clique Aqui</button>
+    <div class="container">
+        <h1>Gerador de Ingresso para Conferência</h1>
+        <form id="ticketForm">
+            <input type="text" id="name" placeholder="Seu nome" required>
+            <input type="text" id="event" placeholder="Nome do Evento" required>
+            <input type="date" id="date" required>
+            <button type="submit">Gerar Ingresso</button>
+        </form>
+        <div id="ticket" class="ticket">
+            <h2 id="eventName"></h2>
+            <p><strong>Nome:</strong> <span id="personName"></span></p>
+            <p><strong>Data:</strong> <span id="eventDate"></span></p>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
