@@ -83,20 +83,18 @@ function clearErrors() {
 }
 
 function generateTicket(name, email, github, avatar) {
-    const ticketName = document.getElementById('ticketName');
-    const ticketEmail = document.getElementById('ticketEmail');
-    const ticketGithub = document.getElementById('ticketGithub');
-    const ticketAvatar = document.getElementById('ticketAvatar');
+    // Salva as informações no localStorage
+    localStorage.setItem('ticketName', name);
+    localStorage.setItem('ticketEmail', email);
+    localStorage.setItem('ticketGithub', github);
 
-    ticketName.textContent = name;
-    ticketEmail.textContent = email;
-    ticketGithub.textContent = github;
-
+    // Cria um URL base64 para o avatar e armazena também
     const reader = new FileReader();
     reader.onload = function(e) {
-        ticketAvatar.src = e.target.result;
+        localStorage.setItem('ticketAvatar', e.target.result);
+        
+        // Redireciona para a nova página do ticket
+        window.location.href = 'ticket-page.html'; // Direciona para a página do ticket
     };
     reader.readAsDataURL(avatar);
-
-    document.getElementById('ticket').classList.remove('hidden');
 }

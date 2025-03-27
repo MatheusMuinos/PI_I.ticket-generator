@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Gerado - Olimpíada Brasileira de Informática 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ticket-container">
+        <div class="ticket-header">
+            <h2>Olimpíada Brasileira de Informática (OBI)</h2>
+            <p class="event-date">27 de Setembro de 2025 / Salvador-BA</p>
+        </div>
+        <div class="ticket-content">
+            <img id="ticketAvatar" src="" alt="Avatar">
+            <div class="user-info">
+                <p class="user-name"><strong>Nome:</strong> <span id="ticketName"></span></p>
+                <p class="user-email"><strong>E-mail:</strong> <span id="ticketEmail"></span></p>
+                <p class="user-github"><strong>GitHub:</strong> <span id="ticketGithub"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Recuperando os dados do localStorage
+        const ticketName = localStorage.getItem('ticketName');
+        const ticketEmail = localStorage.getItem('ticketEmail');
+        const ticketGithub = localStorage.getItem('ticketGithub');
+        const ticketAvatar = localStorage.getItem('ticketAvatar');
+
+        // Exibindo os dados na página
+        document.getElementById('ticketName').textContent = ticketName;
+        document.getElementById('ticketEmail').textContent = ticketEmail;
+        document.getElementById('ticketGithub').textContent = ticketGithub;
+        document.getElementById('ticketAvatar').src = ticketAvatar;
+    </script>
+</body>
+</html>
