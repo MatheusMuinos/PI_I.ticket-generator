@@ -1,26 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conference Ticket Generator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gerador de Ingressos - Olimpíada Brasileira de Informática 2025</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Gerador de Ingresso para Conferência</h1>
-        <form id="ticketForm">
-            <input type="text" id="name" placeholder="Seu nome" required>
-            <input type="text" id="event" placeholder="Nome do Evento" required>
-            <input type="date" id="date" required>
-            <button type="submit">Gerar Ingresso</button>
+        <form id="ticketForm" novalidate>
+            <h1>Gerador de Ingressos para Olimpíada Brasileira de Informática 2025</h1>
+
+            <!-- Área de Upload de Avatar -->
+            <div class="form-group">
+                <h2>Upload Avatar</h2>
+                <div class="upload-area" id="uploadArea">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3979/3979284.png" alt="Ícone de arquivo" class="file-icon">
+                    <p>Arraste e solte ou clique para enviar</p>
+                    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required aria-describedby="avatarError">
+                </div>
+                <p class="hint">Upload da sua foto (JPG ou PNG, até 500KB).</p>
+                <span id="avatarError" class="error-message" aria-live="polite"></span>
+                <!-- Pré-visualização da foto -->
+                <div id="avatarPreview" class="avatar-preview hidden">
+                    <img id="previewImage" src="" alt="Pré-visualização do Avatar">
+                </div>
+            </div>
+
+            <!-- Campos do Formulário -->
+            <div class="form-group">
+                <label for="name">Nome completo</label>
+                <input type="text" id="name" name="name" required aria-describedby="nameError" placeholder="Seu nome">
+                <span id="nameError" class="error-message" aria-live="polite">Preencha o nome.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required aria-describedby="emailError" placeholder="exemplo@email.com">
+                <span id="emailError" class="error-message" aria-live="polite">E-mail inválido.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="github">Nome de Usuário do GitHub</label>
+                <input type="text" id="github" name="github" required aria-describedby="githubError" placeholder="@seunome">
+                <span id="githubError" class="error-message" aria-live="polite">Comece com @ e digite o username.</span>
+            </div>
+
+            <button type="submit">Gerar meu ingresso</button>
         </form>
-        <div id="ticket" class="ticket">
-            <h2 id="eventName"></h2>
-            <p><strong>Nome:</strong> <span id="personName"></span></p>
-            <p><strong>Data:</strong> <span id="eventDate"></span></p>
+
+        <!-- Tíquete Gerado -->
+        <div id="ticket" class="ticket hidden">
+            <div class="ticket-header">
+                <h2>Olimpíada Brasileira de Informática (OBI)</h2>
+                <p class="event-date">27 de Setembro de 2025 / Salvador-BA</p>
+            </div>
+            <div class="ticket-content">
+                <img id="ticketAvatar" src="" alt="Avatar">
+                <div class="user-info">
+                    <p class="user-name"><strong>Nome:</strong> <span id="ticketName"></span></p>
+                    <p class="user-email"><strong>E-mail:</strong> <span id="ticketEmail"></span></p>
+                    <p class="user-github"><strong>GitHub:</strong> <span id="ticketGithub"></span></p>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
