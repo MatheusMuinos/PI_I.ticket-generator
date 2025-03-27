@@ -1,39 +1,274 @@
-body, html {
-    font-family: Arial, sans-serif;
-    margin: 0;
+@font-face {
+    font-family: "Inconsolata";
+    font-weight: 400;
+    src: url(../assets/fonts/static/Inconsolata-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Inconsolata";
+    font-weight: 500;
+    src: url(../assets/fonts/static/Inconsolata-Medium.ttf) format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Inconsolata";
+    font-weight: 700;
+    src: url(../assets/fonts/static/Inconsolata-Bold.ttf) format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Inconsolata";
+    font-weight: 800;
+    src: url(../assets/fonts/static/Inconsolata-ExtraBold.ttf) format("truetype");
+  }
+  
+  * {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inconsolata", sans-serif;
+  }
+  
+  :root {
+    --white: hsl(0, 0%, 100%);
+    --whiteDark: hsl(252, 6%, 83%);
+    --gray: hsl(245, 15%, 58%);
+    --grayDark: hsl(245, 19%, 35%);
+    --blueDark: hsl(248, 70%, 10%);
+    --orangeLight: hsl(7, 88%, 67%);
+    --orange: hsl(7, 71%, 60%);
+    --GradientText: to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%);
+  }
+  
+  label {
+    font-size: 1.25rem;
+  }
+  
+  .container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/images/background-desktop.png);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+  }
+  
+  .box {
+    width: 100%;
+    height: 80vh;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding-top: 25px;
+    gap: 50px;
+    z-index: 3;
+  }
+  
+  .main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
-
-.container {
-    text-align: center;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-input, button {
-    margin: 10px 0;
-    padding: 10px;
-    width: calc(100% - 22px);
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.ticket {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
+  }
+  
+  .user {
+    margin-bottom: 55px;
+  }
+  
+  .user__info {
+    font-size: 3.5rem;
+    color: var(--white);
+  }
+  
+  .user__name {
+    display: inline-block;
+    max-width: 400px;
+    min-width: 200px;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: linear-gradient(var(--GradientText));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .user__paragraph {
+    width: 40%;
+    margin: 25px auto 0;
+    color: var(--gray);
+  }
+  
+  .user__email {
+    color: var(--orangeLight);
+  }
+  
+  .ticket {
+    overflow: hidden;
+    width: 100%;
+    height: 280px;
+    margin-bottom: 35px;
+  }
+  
+  .ticket__container {
+    width: 560px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../assets/images/pattern-ticket.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  
+  .ticket__box {
+    width: 76%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px;
+  }
+  
+  .ticket__header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+  }
+  .ticket__company {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .ticket__date {
+    color: var(--gray);
+  }
+  
+  .ticket__title {
+    font-size: 2rem;
+    color: var(--white);
+  }
+  
+  .ticket__user {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .ticket__photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .ticket__information {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .ticket__name {
+    font-size: 1.5rem;
+    color: var(--white);
+  }
+  
+  .ticket__username {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--whiteDark);
+  }
+  
+  .ticket__id {
+    rotate: 90deg;
+    width: fit-content;
+    height: fit-content;
+    color: var(--gray);
+    font-size: 2rem;
+    padding-top: 10px;
+  }
+  
+  .container__pattern {
+    position: absolute;
+    z-index: 2;
+  }
+  
+  .container__pattern--circle {
+    top: 50%;
+    right: 20%;
+  }
+  
+  .container__pattern--squigglyRight {
+    top: 60px;
+    right: 0;
+  }
+  
+  .container__pattern--squigglyBottom {
+    bottom: -18%;
+    left: 0;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .container {
+      background-image: url(../assets/images/background-tablet.png);
+    }
+    .box {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .user__paragraph {
+      width: 90%;
+    }
+    .user {
+      margin-bottom: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .container {
+      background-image: url(../assets/images/background-mobile.png);
+    }
+    .ticket__container:has(.ticket),
+    .ticket__container {
+      width: 100%;
+      height: 100%;
+    }
+    .ticket {
+      width: 80%;
+      height: 280px;
+    }
+  
+    .ticket__title,
+    .ticket__date {
+      font-size: 1.5rem;
+    }
+  
+    .ticket__name,
+    .ticket__date,  .ticket__id  {
+      font-size: 1rem;
+    }
+  
+    .ticket__username{
+      font-size: 0.8rem;
+    }
+  }
