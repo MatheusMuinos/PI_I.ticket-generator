@@ -53,7 +53,7 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="file"] {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     margin-top: 5px;
     font-size: 1em;
@@ -115,7 +115,7 @@ input[type="text"]:focus, input[type="email"]:focus {
 
 /* Botões */
 button {
-    width: 100%;
+    width: 95%;
     padding: 15px;
     background-color: #FFD700;
     color: #111;
