@@ -9,7 +9,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -144,16 +143,19 @@ button:hover {
 }
 
 /* Estilo do Ticket */
-.ticket {
-    margin-top: 40px;
-    text-align: center;
+.ticket-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #222;
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 400px;
+    max-width: 480px; /* Máximo de largura */
     color: #fff;
+    margin: 0; /* Remover qualquer margem externa */
 }
 
 .ticket-header h2 {
@@ -167,6 +169,21 @@ button:hover {
     color: #aaa;
 }
 
+/* Estilo da Moldura do Ticket */
+.ticket-frame {
+    background-color: #333;
+    padding: 25px;
+    border: 5px solid #FFD700; /* Moldura dourada */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centraliza todo o conteúdo dentro da moldura */
+    width: 100%;
+    text-align: center; /* Centraliza o conteúdo dentro da moldura */
+}
+
 .ticket-content img {
     max-width: 120px;
     border-radius: 50%;
@@ -175,12 +192,34 @@ button:hover {
     margin-bottom: 20px;
 }
 
+/* Informações do Usuário */
 .user-info {
     font-size: 1.2em;
+    color: #fff;
 }
 
 .user-info p {
     margin: 10px 0;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .ticket-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .ticket-header h2 {
+        font-size: 1.6em;
+    }
+
+    .ticket-content img {
+        max-width: 100px;
+    }
+
+    .user-info {
+        font-size: 1em;
+    }
 }
 
 /* Responsividade */
