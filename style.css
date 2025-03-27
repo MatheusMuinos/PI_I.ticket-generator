@@ -1,6 +1,8 @@
+/* Estilo Geral */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #414040; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #111; /* Fundo preto */
+    color: #fff; /* Texto branco */
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,198 +13,200 @@ body {
     box-sizing: border-box;
 }
 
+/* Container */
 .container {
-    background: #09090998;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 400px;
-}
-
-h1, h2 {
-    text-align: center;
-    color: #ffffff;
+    max-width: 480px;
+    transition: all 0.3s ease;
 }
 
 h1 {
-    font-size: 1.5em;
-    margin-bottom: 50px;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #FFD700; /* Amarelo para título */
+    text-align: center;
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: #FFD700;
     margin-bottom: 15px;
+    text-align: center;
 }
 
+/* Estilo dos Formulários */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: bold;
-    color: #fff; 
+    font-size: 1.1em;
+    color: #fff;
 }
 
 input[type="text"], input[type="email"], input[type="file"] {
     width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    margin-top: 5px;
     font-size: 1em;
-    background-color: #2a292c84;
-    color: #fff; 
+    background-color: #333;
+    border: 2px solid #FFD700; /* Borda amarela */
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.3s ease;
 }
 
 input[type="text"]::placeholder, input[type="email"]::placeholder {
-    color: #e0e0e0; 
+    color: #888;
 }
 
+/* Efeito no Input */
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #ff8a42; /* Borda laranja clara ao focar */
+    background-color: #444;
+}
+
+/* Upload de Avatar */
 .upload-area {
-    border: 2px dashed #ccc;
-    padding: 20px;
+    border: 2px dashed #FFD700;
+    padding: 30px;
     text-align: center;
     cursor: pointer;
-    background-color: #7f7c85;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    background-color: #222;
+    border-radius: 10px;
     position: relative;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
 
-.upload-area p {
-    margin: 0;
-    color: #fff;
+.upload-area:hover {
+    background-color: #333;
 }
 
 .file-icon {
-    width: 50px;
-    height: 50px;
-    filter: invert(100%);
-    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
 }
 
 .hint {
-    font-size: 0.875em;
-    color: #e0e0e0; 
-    margin-top: 5px;
+    font-size: 1em;
+    color: #bbb;
 }
 
 .avatar-preview {
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
 }
 
 .avatar-preview img {
-    max-width: 100px;
+    max-width: 120px;
     border-radius: 50%;
-    border: 2px solid #ccc;
+    border: 2px solid #FFD700;
 }
 
+/* Botões */
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #ff8a42;
-    color: white;
+    padding: 15px;
+    background-color: #FFD700;
+    color: #111;
     border: none;
-    border-radius: 4px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 1em;
-    margin-top: 10px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 button:hover {
-    background-color: #22a5e6;
+    background-color: #ff8a42; /* Laranja suave */
 }
 
+/* Erro */
 .error-message {
     color: #ff0000;
-    font-size: 0.875em;
+    background-color: #ffeb3b;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1em;
+    margin-top: 10px;
     display: none;
 }
 
 /* Estilo do Ticket */
 .ticket {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
-    background-color: #76737c;
-    border: 2px dashed #ff7300;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #222;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 350px;
-}
-
-.ticket-header {
-    margin-bottom: 20px;
+    max-width: 400px;
+    color: #fff;
 }
 
 .ticket-header h2 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #fff; 
+    font-size: 1.8em;
+    color: #FFD700;
+    margin-bottom: 10px;
 }
 
 .event-date {
-    font-size: 0.9em;
-    color: #fff;
-    margin: 5px 0;
-}
-
-.ticket-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    font-size: 1.2em;
+    color: #aaa;
 }
 
 .ticket-content img {
-    max-width: 80px;
+    max-width: 120px;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 4px solid #FFD700;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .user-info {
-    text-align: center;
+    font-size: 1.2em;
 }
 
-.user-name, .user-email, .user-github {
-    margin: 5px 0;
-    font-size: 1em;
-    color: #fff;
-}
-
-.hidden {
-    display: none;
+.user-info p {
+    margin: 10px 0;
 }
 
 /* Responsividade */
 @media (max-width: 480px) {
     .container {
         padding: 15px;
+        max-width: 90%;
     }
 
     h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     h2 {
+        font-size: 1.2em;
+    }
+
+    button {
         font-size: 1em;
     }
 
-    .ticket-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .ticket-content img {
-        max-width: 60px;
+        max-width: 100px;
     }
 
     .user-info {
-        text-align: center;
+        font-size: 1em;
     }
 }
