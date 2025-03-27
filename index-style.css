@@ -1,251 +1,251 @@
-/* Estilo Geral */
+/* estilo geral do projeto */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #111; /* Fundo preto */
-    color: #fff; /* Texto branco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* define a fonte do site */
+    background-color: #111; /* fundo preto */
+    color: #fff; /* texto branco */
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    box-sizing: border-box;
+    display: flex; /* usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    min-height: 100vh; /* garante que o corpo ocupe toda a altura da tela */
+    box-sizing: border-box; /* inclui a borda e o padding no tamanho total do elemento */
 }
 
 /* Container */
 .container {
-    background: #111;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #111; /* fundo escuro para o container */
+    padding: 30px; /* espaçamento interno */
+    border-radius: 12px; /* bordas arredondadas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* sombra suave ao redor do container */
     width: 100%;
-    max-width: 480px;
-    transition: all 0.3s ease;
+    max-width: 480px; /* limite de largura */
+    transition: all 0.3s ease; /* animação suave para mudanças */
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #FFD700; /* Amarelo para título */
-    text-align: center;
+    font-size: 2em; /* tamanho maior para o título principal */
+    margin-bottom: 30px; /* espaçamento abaixo do título */
+    color: #FFD700; /* cor dourada */
+    text-align: center; /* centraliza o título */
 }
 
 h2 {
-    font-size: 1.4em;
-    color: #FFD700;
-    margin-bottom: 15px;
-    text-align: center;
+    font-size: 1.4em; /* tamanho um pouco menor que o h1 */
+    color: #FFD700; /* cor dourada */
+    margin-bottom: 15px; /* espaçamento abaixo do h2 */
+    text-align: center; /* centraliza o título */
 }
 
-/* Estilo dos Formulários */
+/* estilo do formulário */
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* espaço entre os grupos de formulário */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* organiza os elementos na vertical */
+    align-items: flex-start; /* alinha os elementos à esquerda */
 }
 
 label {
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 1.1em;
-    color: #fff;
+    margin-bottom: 8px; /* espaço abaixo do label */
+    font-weight: bold; /* negrito para o label */
+    font-size: 1.1em; /* tamanho maior para o label */
+    color: #fff; /* texto branco */
 }
 
 input[type="text"], input[type="email"], input[type="file"] {
-    width: 90%;
-    padding: 12px;
-    margin-top: 5px;
-    font-size: 1em;
-    background-color: #333;
-    border: 2px solid #FFD700; /* Borda amarela */
-    border-radius: 8px;
-    color: #fff;
-    transition: all 0.3s ease;
+    width: 90%; /* largura de 90% para os campos de input */
+    padding: 12px; /* espaçamento interno */
+    margin-top: 5px; /* espaço acima do campo */
+    font-size: 1em; /* tamanho de fonte normal */
+    background-color: #333; /* fundo escuro para os campos */
+    border: 2px solid #FFD700; /* borda dourada */
+    border-radius: 8px; /* bordas arredondadas */
+    color: #fff; /* texto branco dentro dos campos */
+    transition: all 0.3s ease; /* animação suave ao focar */
 }
 
 input[type="text"]::placeholder, input[type="email"]::placeholder {
-    color: #888;
+    color: #888; /* cor do texto de placeholder em cinza */
 }
 
 /* Efeito no Input */
 input[type="text"]:focus, input[type="email"]:focus {
-    border-color: #ff8a42; /* Borda laranja clara ao focar */
-    background-color: #444;
+    border-color: #ff8a42; /* borda laranja clara ao focar */
+    background-color: #444; /* fundo um pouco mais claro ao focar */
 }
 
 /* Upload de Avatar */
 .upload-area {
-    border: 2px dashed #FFD700;
-    padding: 30px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #222;
-    border-radius: 10px;
-    position: relative;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
+    border: 2px dashed #FFD700; /* borda pontilhada dourada */
+    padding: 30px; /* espaçamento interno */
+    text-align: center; /* centraliza o conteúdo */
+    cursor: pointer; /* muda o cursor para indicar que é clicável */
+    background-color: #222; /* fundo escuro */
+    border-radius: 10px; /* bordas arredondadas */
+    position: relative; /* para posicionar elementos dentro */
+    margin-bottom: 20px; /* espaço abaixo da área de upload */
+    transition: all 0.3s ease; /* animação suave */
 }
 
 .upload-area:hover {
-    background-color: #333;
+    background-color: #333; /* muda o fundo quando o mouse passa por cima */
 }
 
 .file-icon {
-    width: 60px;
+    width: 60px; /* tamanho do ícone */
     height: 60px;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* espaço abaixo do ícone */
 }
 
 .hint {
-    font-size: 1em;
-    color: #bbb;
+    font-size: 1em; /* tamanho de fonte normal */
+    color: #bbb; /* cor do texto em cinza */
 }
 
 .avatar-preview {
-    margin-top: 15px;
-    text-align: center;
+    margin-top: 15px; /* espaço acima da pré-visualização */
+    text-align: center; /* centraliza a imagem */
 }
 
 .avatar-preview img {
-    max-width: 120px;
-    border-radius: 50%;
-    border: 2px solid #FFD700;
+    max-width: 120px; /* largura máxima da imagem */
+    border-radius: 50%; /* bordas arredondadas (circular) */
+    border: 2px solid #FFD700; /* borda dourada ao redor da imagem */
 }
 
 /* Botões */
 button {
-    width: 95%;
-    padding: 15px;
-    background-color: #FFD700;
-    color: #111;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    width: 95%; /* largura de 95% para o botão */
+    padding: 15px; /* espaçamento interno */
+    background-color: #FFD700; /* fundo dourado */
+    color: #111; /* texto preto */
+    border: none; /* sem borda */
+    border-radius: 10px; /* bordas arredondadas */
+    cursor: pointer; /* indica que é clicável */
+    font-size: 1.1em; /* tamanho de fonte maior */
+    transition: background-color 0.3s ease; /* animação suave ao passar o mouse */
+    margin-top: 20px; /* espaço acima do botão */
 }
 
 button:hover {
-    background-color: #ff8a42; /* Laranja suave */
+    background-color: #ff8a42; /* fundo laranja suave ao passar o mouse */
 }
 
 /* Erro */
 .error-message {
-    color: #ff0000;
-    background-color: #ffeb3b;
-    padding: 8px;
-    border-radius: 8px;
-    font-size: 1em;
-    margin-top: 10px;
-    display: none;
+    color: #ff0000; /* texto vermelho */
+    background-color: #ffeb3b; /* fundo amarelo */
+    padding: 8px; /* espaçamento interno */
+    border-radius: 8px; /* bordas arredondadas */
+    font-size: 1em; /* tamanho de fonte normal */
+    margin-top: 10px; /* espaço acima da mensagem de erro */
+    display: none; /* inicialmente escondida */
 }
 
 /* Estilo do Ticket */
 .ticket-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #222;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    flex-direction: column; /* organiza os elementos na vertical */
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center; /* centraliza horizontalmente */
+    background-color: #222; /* fundo escuro */
+    border-radius: 12px; /* bordas arredondadas */
+    padding: 25px; /* espaçamento interno */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* sombra suave */
     width: 100%;
-    max-width: 480px; /* Máximo de largura */
-    color: #fff;
-    margin: 0; /* Remover qualquer margem externa */
+    max-width: 480px; /* largura máxima */
+    color: #fff; /* texto branco */
+    margin: 0; /* sem margem externa */
 }
 
 .ticket-header h2 {
-    font-size: 1.8em;
-    color: #FFD700;
-    margin-bottom: 10px;
+    font-size: 1.8em; /* tamanho maior para o título do ticket */
+    color: #FFD700; /* cor dourada */
+    margin-bottom: 10px; /* espaço abaixo do título */
 }
 
 .event-date {
-    font-size: 1.2em;
-    color: #aaa;
+    font-size: 1.2em; /* tamanho de fonte médio */
+    color: #aaa; /* cor cinza claro */
 }
 
 /* Estilo da Moldura do Ticket */
 .ticket-frame {
-    background-color: #333;
-    padding: 25px;
-    border: 5px solid #FFD700; /* Moldura dourada */
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #333; /* fundo escuro da moldura */
+    padding: 25px; /* espaçamento interno */
+    border: 5px solid #FFD700; /* borda dourada */
+    border-radius: 15px; /* bordas arredondadas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* sombra suave */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Centraliza todo o conteúdo dentro da moldura */
+    flex-direction: column; /* organiza os elementos na vertical */
+    justify-content: center; /* centraliza o conteúdo */
+    align-items: center; /* centraliza horizontalmente */
     width: 100%;
-    text-align: center; /* Centraliza o conteúdo dentro da moldura */
+    text-align: center; /* centraliza o texto */
 }
 
 .ticket-content img {
-    max-width: 120px;
-    border-radius: 50%;
-    border: 4px solid #FFD700;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    max-width: 120px; /* largura máxima da imagem */
+    border-radius: 50%; /* bordas arredondadas para a imagem */
+    border: 4px solid #FFD700; /* borda dourada ao redor da imagem */
+    margin-top: 20px; /* espaço acima da imagem */
+    margin-bottom: 20px; /* espaço abaixo da imagem */
 }
 
 /* Informações do Usuário */
 .user-info {
-    font-size: 1.2em;
-    color: #fff;
+    font-size: 1.2em; /* tamanho médio para as informações do usuário */
+    color: #fff; /* texto branco */
 }
 
 .user-info p {
-    margin: 10px 0;
+    margin: 10px 0; /* espaço entre as informações do usuário */
 }
 
 /* Responsividade */
 @media (max-width: 480px) {
     .ticket-container {
-        padding: 15px;
-        max-width: 90%;
+        padding: 15px; /* diminui o padding para telas menores */
+        max-width: 90%; /* aumenta a largura do ticket em telas pequenas */
     }
 
     .ticket-header h2 {
-        font-size: 1.6em;
+        font-size: 1.6em; /* reduz o tamanho do título */
     }
 
     .ticket-content img {
-        max-width: 100px;
+        max-width: 100px; /* diminui o tamanho da imagem */
     }
 
     .user-info {
-        font-size: 1em;
+        font-size: 1em; /* diminui o tamanho da fonte */
     }
 }
 
-/* Responsividade */
+/* Responsividade para container */
 @media (max-width: 480px) {
     .container {
-        padding: 15px;
-        max-width: 90%;
+        padding: 15px; /* diminui o padding */
+        max-width: 90%; /* aumenta a largura em telas pequenas */
     }
 
     h1 {
-        font-size: 1.8em;
+        font-size: 1.8em; /* reduz o tamanho do título */
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: 1.2em; /* reduz o tamanho do h2 */
     }
 
     button {
-        font-size: 1em;
+        font-size: 1em; /* diminui o tamanho da fonte no botão */
     }
 
     .ticket-content img {
-        max-width: 100px;
+        max-width: 100px; /* diminui o tamanho da imagem */
     }
 
     .user-info {
-        font-size: 1em;
+        font-size: 1em; /* diminui o tamanho da fonte nas informações do usuário */
     }
 }

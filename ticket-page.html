@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket Gerado!</title>
-    <link rel="stylesheet" href="ticket-style.css">
+    <meta charset="UTF-8"> <!-- define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- garante que o layout seja responsivo em diferentes tamanhos de tela -->
+    <title>Ticket Gerado!</title> <!-- titulo da pagina -->
+    <link rel="stylesheet" href="ticket-style.css"> <!-- link para o arquivo de estilos css externo -->
 </head>
 <body>
-    <div class="ticket-container">
-        <div class="ticket-header">
-            <h2>Ticket Gerado com Sucesso !</h2>
-            <p class="event-date">Data: 12 de Abril de 2025 / SENAI CIMATEC - Salvador, BA</p>
+    <div class="ticket-container"> <!-- container principal do ticket -->
+        <div class="ticket-header"> <!-- cabecalho do ticket -->
+            <h2>Ticket Gerado com Sucesso !</h2> <!-- titulo indicando que o ticket foi gerado -->
+            <p class="event-date">Data: 12 de abril de 2025 / SENAI CIMATEC - Salvador, BA</p> <!-- data do evento -->
         </div>
-        <div class="ticket-content">
-            <div class="ticket-moldura">
-                <div class="ticket-frame">
-                    <img id="ticketAvatar" src="" alt="Avatar">
-                    <div class="user-info">
-                        <p class="user-name"><strong>Nome:</strong> <span id="ticketName"></span></p>
-                        <p class="user-email"><strong>E-mail:</strong> <span id="ticketEmail"></span></p>
-                        <p class="user-github"><strong>GitHub:</strong> <span id="ticketGithub"></span></p>
+        <div class="ticket-content"> <!-- conteudo do ticket -->
+            <div class="ticket-moldura"> <!-- moldura do ticket -->
+                <div class="ticket-frame"> <!-- quadro do ticket -->
+                    <img id="ticketAvatar" src="" alt="Avatar"> <!-- imagem do avatar do usuario -->
+                    <div class="user-info"> <!-- informacoes do usuario -->
+                        <p class="user-name"><strong>Nome:</strong> <span id="ticketName"></span></p> <!-- nome do usuario -->
+                        <p class="user-email"><strong>E-mail:</strong> <span id="ticketEmail"></span></p> <!-- e-mail do usuario -->
+                        <p class="user-github"><strong>GitHub:</strong> <span id="ticketGithub"></span></p> <!-- github do usuario -->
                     </div>
                 </div>
             </div>
@@ -27,17 +27,17 @@
     </div>
 
     <script>
-        // Recuperando os dados do localStorage
-        const ticketName = localStorage.getItem('ticketName');
-        const ticketEmail = localStorage.getItem('ticketEmail');
-        const ticketGithub = localStorage.getItem('ticketGithub');
-        const ticketAvatar = localStorage.getItem('ticketAvatar');
+        // recuperando os dados do localStorage
+        const ticketName = localStorage.getItem('ticketName'); // recupera o nome do ticket do localStorage
+        const ticketEmail = localStorage.getItem('ticketEmail'); // recupera o e-mail do ticket do localStorage
+        const ticketGithub = localStorage.getItem('ticketGithub'); // recupera o github do ticket do localStorage
+        const ticketAvatar = localStorage.getItem('ticketAvatar'); // recupera o avatar do ticket do localStorage
 
-        // Exibindo os dados na página
-        document.getElementById('ticketName').textContent = ticketName;
-        document.getElementById('ticketEmail').textContent = ticketEmail;
-        document.getElementById('ticketGithub').textContent = ticketGithub;
-        document.getElementById('ticketAvatar').src = ticketAvatar;
+        // exibindo os dados na pagina
+        document.getElementById('ticketName').textContent = ticketName; // exibe o nome na pagina
+        document.getElementById('ticketEmail').textContent = ticketEmail; // exibe o e-mail na pagina
+        document.getElementById('ticketGithub').textContent = ticketGithub; // exibe o github na pagina
+        document.getElementById('ticketAvatar').src = ticketAvatar; // exibe o avatar na pagina
     </script>
 </body>
 </html>

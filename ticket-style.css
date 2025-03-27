@@ -1,165 +1,165 @@
-/* Estilo Geral */
+/* estilo geral */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* remove margens de todos os elementos */
+    padding: 0; /* remove o padding de todos os elementos */
+    box-sizing: border-box; /* inclui a borda e o padding no cálculo do tamanho do elemento */
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #111; /* Fundo preto */
-    color: #fff; /* Texto branco */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* define a fonte para o corpo da página */
+    background-color: #111; /* fundo preto */
+    color: #fff; /* texto branco */
+    display: flex; /* usa flexbox para facilitar o layout */
+    justify-content: center; /* centraliza o conteúdo horizontalmente */
+    align-items: center; /* centraliza o conteúdo verticalmente */
+    min-height: 100vh; /* garante que a altura mínima da tela ocupe toda a altura */
+    box-sizing: border-box; /* aplica o box-sizing ao body */
 }
 
-/* Container */
+/* container */
 .ticket-container {
-    background: #222;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 480px;
-    color: #fff;
-    transition: all 0.3s ease;
+    background: #222; /* fundo escuro para o container */
+    padding: 30px; /* adiciona espaço interno ao redor do conteúdo */
+    border-radius: 12px; /* bordas arredondadas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* sombra suave ao redor do container */
+    width: 100%; /* largura total */
+    max-width: 480px; /* limita a largura máxima */
+    color: #fff; /* texto branco dentro do container */
+    transition: all 0.3s ease; /* animação suave para qualquer alteração */
 }
 
-/* Header */
+/* cabeçalho */
 .ticket-header h2 {
-    font-size: 1.8em;
-    color: #FFD700; /* Amarelo para título */
-    margin-bottom: 10px;
-    text-align: center;
+    font-size: 1.8em; /* tamanho maior para o título */
+    color: #FFD700; /* cor dourada para o título */
+    margin-bottom: 10px; /* espaço abaixo do título */
+    text-align: center; /* centraliza o título */
 }
 
 .event-date {
-    font-size: 1.2em;
-    color: #aaa;
-    text-align: center;
+    font-size: 1.2em; /* tamanho médio para a data */
+    color: #aaa; /* cor cinza claro para a data */
+    text-align: center; /* centraliza a data */
 }
 
-/* Moldura do Ticket */
+/* moldura do ticket */
 .ticket-frame {
-    background-color: #333;
-    padding: 25px;
-    border: 5px solid #FFD700; /* Moldura dourada */
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Centraliza todo o conteúdo dentro da moldura */
-    width: 100%;
-    text-align: center; /* Centraliza o conteúdo dentro da moldura */
+    background-color: #333; /* fundo escuro para a moldura */
+    padding: 25px; /* espaço interno ao redor do conteúdo da moldura */
+    border: 5px solid #FFD700; /* borda dourada ao redor da moldura */
+    border-radius: 15px; /* bordas arredondadas na moldura */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* sombra suave ao redor da moldura */
+    display: flex; /* usa flexbox para o layout interno */
+    flex-direction: column; /* organiza o conteúdo verticalmente */
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center; /* centraliza horizontalmente */
+    width: 100%; /* largura total */
+    text-align: center; /* centraliza o conteúdo dentro da moldura */
 }
 
 #ticketAvatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid #FFD700;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    width: 150px; /* largura da imagem do avatar */
+    height: 150px; /* altura da imagem do avatar */
+    border-radius: 50%; /* bordas arredondadas (circular) */
+    border: 4px solid #FFD700; /* borda dourada ao redor do avatar */
+    margin-top: 20px; /* espaço acima do avatar */
+    margin-bottom: 20px; /* espaço abaixo do avatar */
 }
 
-/* Informações do Usuário */
+/* informações do usuário */
 .user-info {
-    font-size: 1.2em;
-    color: #fff;
+    font-size: 1.2em; /* tamanho médio para as informações do usuário */
+    color: #fff; /* texto branco */
 }
 
 .user-info p {
-    margin: 10px 0;
+    margin: 10px 0; /* espaço entre cada linha de informação */
 }
 
 .user-info span {
-    color: #FFD700; /* Dourado para destacar os dados */
+    color: #FFD700; /* cor dourada para destacar as informações */
 }
 
-/* Responsividade */
+/* responsividade */
 @media (max-width: 768px) {
     .ticket-container {
-        padding: 20px;
-        max-width: 90%;
+        padding: 20px; /* reduz o padding para telas menores */
+        max-width: 90%; /* aumenta a largura máxima para 90% */
     }
 
     .ticket-header h2 {
-        font-size: 1.6em;
+        font-size: 1.6em; /* reduz o tamanho do título */
     }
 
     .event-date {
-        font-size: 1.1em;
+        font-size: 1.1em; /* reduz o tamanho da data */
     }
 
     .ticket-frame {
-        padding: 20px;
+        padding: 20px; /* ajusta o padding na moldura */
     }
 
     #ticketAvatar {
-        width: 120px;
-        height: 120px;
+        width: 120px; /* reduz o tamanho do avatar */
+        height: 120px; /* reduz o tamanho do avatar */
     }
 
     .user-info {
-        font-size: 1.1em;
+        font-size: 1.1em; /* reduz o tamanho da fonte nas informações do usuário */
     }
 }
 
 @media (max-width: 480px) {
     .ticket-container {
-        padding: 15px;
-        max-width: 90%;
+        padding: 15px; /* reduz o padding ainda mais */
+        max-width: 90%; /* ajusta a largura máxima */
     }
 
     .ticket-header h2 {
-        font-size: 1.4em;
+        font-size: 1.4em; /* diminui ainda mais o tamanho do título */
     }
 
     .event-date {
-        font-size: 1em;
+        font-size: 1em; /* ajusta o tamanho da data */
     }
 
     .ticket-frame {
-        padding: 15px;
+        padding: 15px; /* reduz o padding na moldura */
     }
 
     #ticketAvatar {
-        width: 100px;
-        height: 100px;
+        width: 100px; /* reduz o tamanho do avatar */
+        height: 100px; /* reduz o tamanho do avatar */
     }
 
     .user-info {
-        font-size: 1em;
+        font-size: 1em; /* ajusta o tamanho da fonte nas informações do usuário */
     }
 }
 
 @media (max-width: 375px) {
     .ticket-container {
-        padding: 10px;
+        padding: 10px; /* reduz ainda mais o padding */
     }
 
     .ticket-header h2 {
-        font-size: 1.3em;
+        font-size: 1.3em; /* diminui o tamanho do título */
     }
 
     .event-date {
-        font-size: 0.9em;
+        font-size: 0.9em; /* diminui o tamanho da data */
     }
 
     .ticket-frame {
-        padding: 10px;
+        padding: 10px; /* diminui o padding na moldura */
     }
 
     #ticketAvatar {
-        width: 90px;
-        height: 90px;
+        width: 90px; /* diminui o tamanho do avatar */
+        height: 90px; /* diminui o tamanho do avatar */
     }
 
     .user-info {
-        font-size: 0.9em;
+        font-size: 0.9em; /* ajusta o tamanho da fonte nas informações do usuário */
     }
 }

@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aulão de Revisão do EDAG - SENAI CIMATEC</title>
-    <link rel="stylesheet" href="index-style.css">
+    <meta charset="UTF-8"> <!-- define o conjunto de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- garante que o layout seja responsivo em diferentes tamanhos de tela -->
+    <title>Aulão de Revisão do EDAG - SENAI CIMATEC</title> <!-- título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="index-style.css"> <!-- link para o arquivo de estilos CSS externo -->
 </head>
 <body>
-    <div class="container">
-        <form id="ticketForm" novalidate>
-            <h1>Aulão de Revisão do EDAG - SENAI CIMATEC</h1>
+    <div class="container"> <!-- container que envolve todo o conteúdo do formulário -->
+        <form id="ticketForm" novalidate> <!-- formulário que contém todos os campos do ticket e não realiza validação automática -->
+            <h1>Aulão de Revisão do EDAG - SENAI CIMATEC</h1> <!-- título principal da página -->
 
             <!-- Área de Upload de Avatar -->
-            <div class="form-group">
-                <h2>Upload Avatar</h2>
-                <div class="upload-area" id="uploadArea">
-                    <img src="https://cdn-icons-png.flaticon.com/512/3979/3979284.png" alt="Ícone de arquivo" class="file-icon">
-                    <p>Arraste e solte ou clique para enviar</p>
-                    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required aria-describedby="avatarError">
+            <div class="form-group"> <!-- div que contém o grupo do formulário relacionado ao upload do avatar -->
+                <h2>Upload Avatar</h2> <!-- subtítulo para a área de upload -->
+                <div class="upload-area" id="uploadArea"> <!-- área onde o usuário pode arrastar ou clicar para enviar a imagem -->
+                    <img src="https://cdn-icons-png.flaticon.com/512/3979/3979284.png" alt="Ícone de arquivo" class="file-icon"> <!-- ícone de arquivo -->
+                    <p>Arraste e solte ou clique para enviar</p> <!-- instrução para o usuário -->
+                    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required aria-describedby="avatarError"> <!-- campo para selecionar a imagem (somente PNG ou JPEG) -->
                 </div>
-                <p class="hint">Upload da sua foto (JPG ou PNG, até 500KB).</p>
-                <span id="avatarError" class="error-message" aria-live="polite"></span>
+                <p class="hint">Upload da sua foto (JPG ou PNG, até 500KB).</p> <!-- dica sobre o formato e tamanho da imagem -->
+                <span id="avatarError" class="error-message" aria-live="polite"></span> <!-- espaço para mensagens de erro sobre o avatar -->
                 <!-- Pré-visualização da foto -->
-                <div id="avatarPreview" class="avatar-preview hidden">
-                    <img id="previewImage" src="" alt="Pré-visualização do Avatar">
+                <div id="avatarPreview" class="avatar-preview hidden"> <!-- área para exibir a imagem do avatar depois do upload -->
+                    <img id="previewImage" src="" alt="Pré-visualização do Avatar"> <!-- imagem de pré-visualização -->
                 </div>
             </div>
 
-            <!-- Campos do Formulário -->
-            <div class="form-group">
-                <label for="name">Nome completo</label>
-                <input type="text" id="name" name="name" required aria-describedby="nameError" placeholder="Seu nome">
-                <span id="nameError" class="error-message" aria-live="polite">Preencha o nome.</span>
+            <!-- Campo para Nome Completo -->
+            <div class="form-group"> <!-- grupo para o campo de nome -->
+                <label for="name">Nome completo</label> <!-- label para o campo de nome -->
+                <input type="text" id="name" name="name" required aria-describedby="nameError" placeholder="Seu nome"> <!-- campo de texto para nome completo -->
+                <span id="nameError" class="error-message" aria-live="polite">Preencha o nome.</span> <!-- mensagem de erro caso o nome não seja preenchido -->
             </div>
 
-            <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required aria-describedby="emailError" placeholder="exemplo@email.com">
-                <span id="emailError" class="error-message" aria-live="polite">E-mail inválido.</span>
+            <!-- Campo para E-mail -->
+            <div class="form-group"> <!-- grupo para o campo de e-mail -->
+                <label for="email">E-mail</label> <!-- label para o campo de e-mail -->
+                <input type="email" id="email" name="email" required aria-describedby="emailError" placeholder="exemplo@email.com"> <!-- campo de e-mail -->
+                <span id="emailError" class="error-message" aria-live="polite">E-mail inválido.</span> <!-- mensagem de erro caso o e-mail seja inválido -->
             </div>
 
-            <div class="form-group">
-                <label for="github">Nome de Usuário do GitHub</label>
-                <input type="text" id="github" name="github" required aria-describedby="githubError" placeholder="@seunome">
-                <span id="githubError" class="error-message" aria-live="polite">Comece com @ e digite o username.</span>
+            <!-- Campo para Nome de Usuário do GitHub -->
+            <div class="form-group"> <!-- grupo para o campo de GitHub -->
+                <label for="github">Nome de Usuário do GitHub</label> <!-- label para o campo de nome de usuário do GitHub -->
+                <input type="text" id="github" name="github" required aria-describedby="githubError" placeholder="@seunome"> <!-- campo para nome de usuário do GitHub -->
+                <span id="githubError" class="error-message" aria-live="polite">Comece com @ e digite o username.</span> <!-- mensagem de erro caso o nome de usuário não seja válido -->
             </div>
 
-            <button type="submit">Gerar meu ingresso</button>
+            <button type="submit">Gerar meu ingresso</button> <!-- botão para enviar o formulário e gerar o ingresso -->
         </form>
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- link para o arquivo JavaScript externo que manipula o comportamento da página -->
 </body>
 </html>
