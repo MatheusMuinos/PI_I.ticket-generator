@@ -35,9 +35,9 @@ document.getElementById('ticketForm').addEventListener('submit', function(event)
         isValid = false;
     }
 
-    // verifica se o e-mail foi preenchido e se é valido
+    // verifica se o mail foi preenchido e se eh valido
     if (!email) {
-        showError('emailError', 'e-mail invalido.'); // mostra erro se nao tiver e-mail
+        showError('emailError', 'e-mail invalido.');
         isValid = false;
     } else if (!validateEmail(email)) {
         showError('emailError', 'e-mail invalido.'); // valida e-mail com expressao regular
@@ -73,6 +73,11 @@ document.getElementById('ticketForm').addEventListener('submit', function(event)
 
 // funcao para validar o e-mail com expressao regular
 function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // expressao regular para validar o formato de e-mail
+    return re.test(email); // retorna true ou false baseado no e-mail
+}
+// funcao para validar o e-mail com expressao regular
+function validateName(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // expressao regular para validar o formato de e-mail
     return re.test(email); // retorna true ou false baseado no e-mail
 }

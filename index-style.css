@@ -111,6 +111,7 @@ input[type="text"]:focus, input[type="email"]:focus {
     max-width: 120px; /* largura máxima da imagem */
     border-radius: 50%; /* bordas arredondadas (circular) */
     border: 2px solid #FFD700; /* borda dourada ao redor da imagem */
+    margin-left: 150px;
 }
 
 /* Botões */
