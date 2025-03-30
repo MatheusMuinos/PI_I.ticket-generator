@@ -40,6 +40,7 @@ body {
     font-size: 1.2em; /* tamanho médio para a data */
     color: #aaa; /* cor cinza claro para a data */
     text-align: center; /* centraliza a data */
+    margin-bottom: 15px; /* colocar masi espaço entre a data */
 }
 
 /* moldura do ticket */
